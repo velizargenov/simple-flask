@@ -7,10 +7,12 @@
   </head>
 
   <body>
-    {% if name %}
-    <p>Hello {{name}}!</p>
+    {% if data %}
+    <p>Hello {{data.name}}!</p>
+    <p>Thank you for subscribing.</p>
+    <p>We'll be sending offers to {{data.email}}</p>
     {% else %}
-    <p>Hello anonymous person!</p>
+    <p>No data available!</p>
     {% endif %}
   </body>
 

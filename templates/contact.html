@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>My Flask App Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/styles.css") }}">
+  </head>
+
+  <body>
+    <h1>Let's keep in touch!</h1>
+    <div id="contact-form">
+      <form method="post" action="/signup">
+        <fieldset>
+          <legend>Fill in the form</legend>
+          <label for="name">
+            Name:
+            <input type="text" id="name" name="name" required="required" />
+          </label>
+          <label for="email">
+              Email:
+              <input type="email" id="email" name="email" required="required" />
+            </label>
+          <label for="submit-button">
+            <input type="submit" id="submit-button" value="Submit" />
+          </label>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

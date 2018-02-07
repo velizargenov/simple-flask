@@ -13,8 +13,15 @@ def hello_someone(name):
     return render_template('hello.html', name=name.title())
 
 
-def asd():
-    return 'hi'
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+@app.route('/signup', methods=['POST'])
+def sign_up():
+    form_data = request.form
+    return render_template('thankyou.html', data=form_data)
 
 
 app.run(debug=True)

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>My Flask App Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/styles.css") }}">
+  </head>
+
+  <body>
+    <div id="contact-form">
+      <form method="post" action="/language-details">
+        <fieldset>
+          <legend>Please select a language...</legend>
+          <label for="fr">
+            <input type="radio" id="fr" name="language" value="french" checked>
+            French
+          </label>
+          <label for="de">
+            <input type="radio" id="de" name="language" value="german">
+            German
+          </label>
+
+          <label for="button--submit">
+              <input type="submit" id="button--submit" value="Select" />
+          </label>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

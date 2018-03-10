@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>My Flask App Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/styles.css") }}">
+  </head>
+
+  <body>
+    {% if data %}
+    <p>Selected language: {{data.language}}!</p>
+    <p>bio: {{data.bio}}!</p>
+    <iframe width="560" height="315" src="{{ data.url }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+    {% endif %}
+  </body>
+
+</html>
+
